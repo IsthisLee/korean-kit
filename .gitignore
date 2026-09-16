@@ -1,0 +1,54 @@
+# User-specific settings (secrets, local overrides)
+settings.local.json
+CLAUDE.local.md
+
+# Backup files
+*.bak.*
+*.backup
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Logs
+*.log
+
+# Claude Code
+# .claude/settings.json 은 기여자가 공유하는 프로젝트 설정이라 커밋한다.
+# 개인 설정과 세션 부산물만 무시한다.
+.claude/*
+!.claude/settings.json
+.claude/settings.local.json
+.claude/artifacts/
+.claude/work-log/
+.claude-session-imports/
+.codex/backups/
+
+# Archive
+archive/
+reports/
+
+# 실험 산출물. LLM 호출 결과라 커밋하지 않는다. 숫자는 각 실험의 README 에 적는다.
+docs/experiments/*/out/
+docs/experiments/*/subout/
+docs/experiments/*/skillout/
+docs/experiments/*/judge/
+
+# 개인 파일과 가드 패턴(tools/guard.sh)
+.private/

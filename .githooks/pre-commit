@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# 이 저장소의 커밋 직전 검사. 켜기: git config core.hooksPath .githooks
+# 공개 저장소 가드(tools/guard.sh) 가 개인 식별 정보와 .private/ 파일이 커밋에 섞이는 것을 막는다.
+# 건너뛰기는 git commit --no-verify 뿐이다. 사람이 의도해서 할 때만 쓴다. CI 의 같은 가드는 건너뛸 수 없다.
+set -u
+root="$(git rev-parse --show-toplevel)"
+"$root/tools/guard.sh" --staged || exit 1
+exit 0
