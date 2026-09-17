@@ -4,7 +4,7 @@
 <a href="https://github.com/IsthisLee/korean-kit/actions/workflows/codeql.yml"><img alt="CodeQL" src="https://github.com/IsthisLee/korean-kit/actions/workflows/codeql.yml/badge.svg?branch=main"></a>
 <img alt="MIT" src="https://img.shields.io/badge/license-MIT-blue.svg">
 <img alt="Claude Code Plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-8A2BE2">
-<img alt="version" src="https://img.shields.io/badge/version-2.1.0-lightgrey">
+<img alt="version" src="https://img.shields.io/badge/version-0.1.0-lightgrey">
 <img alt="network" src="https://img.shields.io/badge/network-none-success">
 <a href="https://github.com/IsthisLee/korean-ai-signals"><img alt="analysis" src="https://img.shields.io/badge/analysis-korean--ai--signals-informational"></a>
 
@@ -120,10 +120,13 @@ Claude Code로 한국어 문서를 쓰면서 번역투와 AI 티를 줄여 준�
 ### 도구 비교 기준
 
 1. **뜻 손실이 0건인 도구만 남깁니다.** 원문이나 요청에 담긴 사실을 목록으로 미리 만들고, 결과 글에서 사라지거나 바뀌거나 새로 생긴 사실과 빠진 문장 성분을 셉니다. 1건이라도 있으면 탈락입니다.
-2. **AI 신호 밀도가 낮은 순으로 세웁니다.** 검사기 점수를 1,000자당으로 세고, 사람 글의 값을 기준선으로 함께 적습니다.
-3. **밀도가 같으면 명확성으로 가립니다.** 주어나 지시 대상이 모호한 곳을 셉니다.
+2. **남은 도구는 자연스러움으로 줄 세웁니다.** 두 도구의 결과를 나란히 놓고 어느 쪽이 사람이 쓴 글에 가까운지 블라인드로 고르게 합니다. 쌍마다 순서를 바꿔 두 번 묻고 승패를 이항 검정으로 셉니다.
+3. **자연스러움이 갈리지 않으면 AI 신호 밀도로 가립니다.** 검사기 점수를 1,000자당으로 세고, 사람 글의 값을 기준선으로 함께 적습니다.
+4. **그래도 같으면 명확성으로 가립니다.** 주어나 지시 대상이 모호한 곳을 셉니다.
 
-뜻 손실은 claude-opus-5 가 순서를 바꿔 두 번 판정하고, 판정의 일부는 사람이 원문과 대조합니다. 원문을 얼마나 바꿨는지(변경률)도 기록해서 과하게 고친 경우를 가려냅니다.
+자연스러움을 AI 신호 밀도보다 앞에 둔 이유가 있습니다. 표지를 적게 만드는 것과 잘 읽히게 만드는 것은 다릅니다. 이 저장소에서 규칙을 늘려 표지를 크게 줄인 판이 블라인드 쌍대 판정에서 옛 판을 이기지 못한 적이 있습니다(5승 6패).
+
+뜻 손실은 claude-opus-5 가 순서를 바꿔 두 번 판정하고, 판정의 일부는 사람이 원문과 대조합니다. 원문을 얼마나 바꿨는지(변경률)도 기록해서 과하게 고친 경우를 가려냅니다. 판정 기준 전문은 [분석 계획 8절](https://github.com/IsthisLee/korean-ai-signals/blob/main/docs/plan.md#8-도구-비교)에 있습니다.
 
 ## 분석 결과
 
@@ -144,26 +147,26 @@ AUROC는 사람 글과 Claude 글을 한 편씩 짝지었을 때 Claude 글의 �
 
 ### output style
 
-| output style                                             | 뜻 손실 | AI 신호 밀도(1,000자당) | 명확성  | 판정      |
-| -------------------------------------------------------- | ------- | ----------------------- | ------- | --------- |
-| 기준선(아무것도 켜지 않음)                               | 측정 전 | 측정 전                 | 측정 전 | 비교 기준 |
-| [fluent-korean](https://github.com/snflkd/fluent-korean) | 측정 전 | 측정 전                 | 측정 전 | 측정 전   |
+| output style                                             | 뜻 손실 | 자연스러움 | AI 신호 밀도(1,000자당) | 명확성  | 판정      |
+| -------------------------------------------------------- | ------- | ---------- | ----------------------- | ------- | --------- |
+| 기준선(아무것도 켜지 않음)                               | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 비교 기준 |
+| [fluent-korean](https://github.com/snflkd/fluent-korean) | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전   |
 
 output style 로 배포되는 한국어 플러그인은 2026-09-15 까지 이것 하나를 찾았습니다. 찾은 방법은 [분석 계획](https://github.com/IsthisLee/korean-ai-signals/blob/main/docs/plan.md)에 있습니다.
 
 ### 윤문 도구
 
-| 도구                                                                                  | 뜻 손실 | AI 신호 밀도(1,000자당) | 명확성  | 변경률  | 판정    |
-| ------------------------------------------------------------------------------------- | ------- | ----------------------- | ------- | ------- | ------- |
-| [k-skill](https://github.com/NomaDamas/k-skill) `korean-humanizer`                    | 측정 전 | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [im-not-ai](https://github.com/epoko77-ai/im-not-ai) `humanize-korean` (지금 묶은 것) | 측정 전 | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [claude-forge](https://github.com/sangrokjung/claude-forge) `humanize-korean`         | 측정 전 | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [patina](https://github.com/devswha/patina)                                           | 측정 전 | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [DaleSeo/korean-skills](https://github.com/DaleSeo/korean-skills) `humanizer`         | 측정 전 | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [korean-report-skills](https://github.com/JangHyun-bin/korean-report-skills)          | 측정 전 | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [korean-prose-skill](https://github.com/JellyBrick/korean-prose-skill)                | 측정 전 | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [yoonmoon](https://github.com/amondnet/yoonmoon)                                      | 측정 전 | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [stop-slop-ko](https://github.com/limleesol/stop-slop-ko)                             | 측정 전 | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| 도구                                                                                  | 뜻 손실 | 자연스러움 | AI 신호 밀도(1,000자당) | 명확성  | 변경률  | 판정    |
+| ------------------------------------------------------------------------------------- | ------- | ---------- | ----------------------- | ------- | ------- | ------- |
+| [k-skill](https://github.com/NomaDamas/k-skill) `korean-humanizer`                    | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [im-not-ai](https://github.com/epoko77-ai/im-not-ai) `humanize-korean` (지금 묶은 것) | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [claude-forge](https://github.com/sangrokjung/claude-forge) `humanize-korean`         | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [patina](https://github.com/devswha/patina)                                           | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [DaleSeo/korean-skills](https://github.com/DaleSeo/korean-skills) `humanizer`         | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [korean-report-skills](https://github.com/JangHyun-bin/korean-report-skills)          | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [korean-prose-skill](https://github.com/JellyBrick/korean-prose-skill)                | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [yoonmoon](https://github.com/amondnet/yoonmoon)                                      | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [stop-slop-ko](https://github.com/limleesol/stop-slop-ko)                             | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
 
 k-skill 의 맞춤법 검사기는 외부 서비스의 이용 조건 때문에 대량 측정에서 뺍니다.
 
