@@ -5,11 +5,11 @@
 | 상황                         | 가는 곳                                                                                                            |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | 설치와 사용법을 모르겠다     | [README](README.md) 의 설치 절부터 봅니다                                                                            |
-| 윤문이 뜻을 바꿨다           | [버그 이슈](https://github.com/IsthisLee/korean-writing/issues/new?template=bug.yml) 에 원문과 결과를 함께 보냅니다  |
-| 스킬이나 스크립트가 죽는다   | [버그 이슈](https://github.com/IsthisLee/korean-writing/issues/new?template=bug.yml)                                 |
+| 윤문이 뜻을 바꿨다           | [버그 이슈](https://github.com/IsthisLee/korean-kit/issues/new?template=bug.yml) 에 원문과 결과를 함께 보냅니다  |
+| 스킬이나 스크립트가 죽는다   | [버그 이슈](https://github.com/IsthisLee/korean-kit/issues/new?template=bug.yml)                                 |
 | 무엇을 AI 티로 보는지 궁금하다 | 사람 글과 Claude 글을 비교하는 분석을 따로 합니다. [korean-ai-signals](https://github.com/IsthisLee/korean-ai-signals) 에 있습니다 |
-| 취약점을 찾았다              | 공개 이슈로 올리지 말고 [비공개 신고](https://github.com/IsthisLee/korean-writing/security/advisories/new)            |
-| 무엇을 묶을지 의논하고 싶다  | [Discussions](https://github.com/IsthisLee/korean-writing/discussions)                                               |
+| 취약점을 찾았다              | 공개 이슈로 올리지 말고 [비공개 신고](https://github.com/IsthisLee/korean-kit/security/advisories/new)            |
+| 무엇을 묶을지 의논하고 싶다  | [Discussions](https://github.com/IsthisLee/korean-kit/discussions)                                               |
 | 고쳐서 보내고 싶다           | [CONTRIBUTING.md](CONTRIBUTING.md)                                                                                   |
 
 ## 이슈를 열 때 넣어 주시면 좋은 것

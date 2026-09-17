@@ -1,7 +1,6 @@
-<!-- korean-writing: ignore -->
 # 내장 윤문 파이프라인을 실제로 돌린 기록 (2026-09-10)
 
-`/korean-writing:humanize` 에 AI 티를 일부러 몰아넣은 200자 문단을 넣었다. 조건: 실제 로그인, `claude -p --setting-sources "" --strict-mcp-config --plugin-dir <저장소> --dangerously-skip-permissions --max-turns 40`, 작업 트리의 플러그인, 격리된 작업 폴더. 걸린 시간 451초, 비용 1.64달러, 턴 16, 서브에이전트 3종 호출·3종 완료, 모델 claude-sonnet-5, claude-opus-5.
+`/korean-kit:humanize` 에 AI 티를 일부러 몰아넣은 200자 문단을 넣었다. 조건: 실제 로그인, `claude -p --setting-sources "" --strict-mcp-config --plugin-dir <저장소> --dangerously-skip-permissions --max-turns 40`, 작업 트리의 플러그인, 격리된 작업 폴더. 걸린 시간 451초, 비용 1.64달러, 턴 16, 서브에이전트 3종 호출·3종 완료, 모델 claude-sonnet-5, claude-opus-5.
 
 ## 입력
 

@@ -58,7 +58,7 @@ jobs:
           {
             echo "tag=$INPUT_TAG"
             echo "version=$VER"
-            echo "name=korean-writing-$INPUT_TAG"
+            echo "name=korean-kit-$INPUT_TAG"
           } >> "$GITHUB_OUTPUT"
           echo "태그 $INPUT_TAG · plugin.json $MANIFEST — 일치"
 

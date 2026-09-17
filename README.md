@@ -1,7 +1,7 @@
 <p align="center">
 
-<a href="https://github.com/IsthisLee/korean-writing/actions/workflows/validate.yml"><img alt="Validate" src="https://github.com/IsthisLee/korean-writing/actions/workflows/validate.yml/badge.svg?branch=main"></a>
-<a href="https://github.com/IsthisLee/korean-writing/actions/workflows/codeql.yml"><img alt="CodeQL" src="https://github.com/IsthisLee/korean-writing/actions/workflows/codeql.yml/badge.svg?branch=main"></a>
+<a href="https://github.com/IsthisLee/korean-kit/actions/workflows/validate.yml"><img alt="Validate" src="https://github.com/IsthisLee/korean-kit/actions/workflows/validate.yml/badge.svg?branch=main"></a>
+<a href="https://github.com/IsthisLee/korean-kit/actions/workflows/codeql.yml"><img alt="CodeQL" src="https://github.com/IsthisLee/korean-kit/actions/workflows/codeql.yml/badge.svg?branch=main"></a>
 <img alt="MIT" src="https://img.shields.io/badge/license-MIT-blue.svg">
 <img alt="Claude Code Plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-8A2BE2">
 <img alt="version" src="https://img.shields.io/badge/version-2.1.0-lightgrey">
@@ -15,7 +15,7 @@
 
   <source media="(prefers-color-scheme: light)" srcset="docs/assets/hero-light.svg">
 
-  <img src="docs/assets/hero.svg" alt="korean-writing: 내가 쓰려고 분석한 한국어 도구들을 묶은 Claude Code 플러그인" width="100%">
+  <img src="docs/assets/hero.svg" alt="korean-kit: 내가 쓰려고 분석한 한국어 도구들을 묶은 Claude Code 플러그인" width="100%">
 
 </picture>
 
@@ -168,11 +168,11 @@ k-skill 의 맞춤법 검사기는 외부 서비스의 이용 조건 때문에 �
 ## 설치
 
 ```bash
-claude plugin marketplace add IsthisLee/korean-writing
-claude plugin install korean-writing
+claude plugin marketplace add IsthisLee/korean-kit
+claude plugin install korean-kit
 ```
 
-`claude plugin list` 에 `korean-writing` 이 `enabled` 로 보이면 끝입니다. 새 버전은 `claude plugin update korean-writing` 으로 받습니다. 권하는 output style 은 이 플러그인에 들어 있지 않으므로, 위 결과표에 링크한 저장소의 안내대로 따로 설치합니다.
+`claude plugin list` 에 `korean-kit` 이 `enabled` 로 보이면 끝입니다. 새 버전은 `claude plugin update korean-kit` 으로 받습니다. 권하는 output style 은 이 플러그인에 들어 있지 않으므로, 위 결과표에 링크한 저장소의 안내대로 따로 설치합니다.
 
 | 필요한 것         | 어디에 쓰나                               | 없으면                   |
 | ----------------- | ----------------------------------------- | ------------------------ |
@@ -194,9 +194,9 @@ CI가 macOS와 Linux에서 같은 검사를 돌립니다. Windows는 Git Bash나
 
 | 무엇이   | 저절로 도는 때                                   | 직접 부르는 명령                               |
 | -------- | ------------------------------------------------ | ---------------------------------------------- |
-| 윤문     | "AI 티 없애줘", "번역투 고쳐줘" 같은 요청        | `/korean-writing:humanize [글 또는 파일 경로]` |
-| 2차 윤문 | 저절로 돌지 않습니다                             | `/korean-writing:humanize-redo [지시]`         |
-| 글자 수  | "500자 이내로", "글자 수 세줘" 같은 요청         | `/korean-writing:korean-character-count`       |
+| 윤문     | "AI 티 없애줘", "번역투 고쳐줘" 같은 요청        | `/korean-kit:humanize [글 또는 파일 경로]` |
+| 2차 윤문 | 저절로 돌지 않습니다                             | `/korean-kit:humanize-redo [지시]`         |
+| 글자 수  | "500자 이내로", "글자 수 세줘" 같은 요청         | `/korean-kit:korean-character-count`       |
 
 ## 분석 다시 돌리기
 
@@ -217,7 +217,7 @@ CI가 macOS와 Linux에서 같은 검사를 돌립니다. Windows는 Git Bash나
 `plugin/` 만 설치한 사람의 기계로 복사됩니다. 테스트, 분석 스크립트, CI는 그 밖에 둡니다.
 
 ```
-korean-writing/
+korean-kit/
 ├── plugin/        설치본: 매니페스트, 윤문 스킬·에이전트, 글자 수 스킬
 ├── tools/         가드, 릴리스, 그림 스크립트
 └── docs/assets/   그림
@@ -225,7 +225,7 @@ korean-writing/
 
 ## 기여
 
-제 작업에 맞춘 묶음이지만 제보는 반깁니다. 절차는 [CONTRIBUTING.md](CONTRIBUTING.md)에 있습니다. 윤문이 뜻을 바꾸거나 스크립트가 죽었다면 [버그 제보](https://github.com/IsthisLee/korean-writing/issues/new?template=bug.yml)로 고치지 않은 원문 그대로 보내 주세요. 받아서 확인하는 명령은 이렇습니다.
+제 작업에 맞춘 묶음이지만 제보는 반깁니다. 절차는 [CONTRIBUTING.md](CONTRIBUTING.md)에 있습니다. 윤문이 뜻을 바꾸거나 스크립트가 죽었다면 [버그 제보](https://github.com/IsthisLee/korean-kit/issues/new?template=bug.yml)로 고치지 않은 원문 그대로 보내 주세요. 받아서 확인하는 명령은 이렇습니다.
 
 ```bash
 python3 -m py_compile plugin/scripts/*.py

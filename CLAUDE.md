@@ -35,7 +35,7 @@ docs/assets 그림
 
 ```bash
 HOME=/tmp/kw-home claude plugin marketplace add "$PWD"
-HOME=/tmp/kw-home claude plugin install korean-writing@korean-writing
+HOME=/tmp/kw-home claude plugin install korean-kit@korean-kit
 find /tmp/kw-home/.claude/plugins/cache -type f | wc -l    # 설치본 파일 수
 ```
 
@@ -60,7 +60,7 @@ node plugin/skills/korean-character-count/scripts/korean_character_count.js --te
 
 `plugin/skills/humanize-korean/**`, `plugin/skills/humanize/**`, `plugin/skills/humanize-redo/**`, `plugin/agents/**`, `plugin/scripts/*.py`, `plugin/skills/korean-character-count/scripts/**` 는 다른 MIT 프로젝트에서 가져온 파일입니다. 출처와 수정 범위가 [plugin/NOTICE.md](plugin/NOTICE.md) 에 적혀 있습니다. 고쳐야 하면 그 파일의 해당 줄도 함께 고칩니다.
 
-윤문 파이프라인은 im-not-ai 의 런타임 부분집합을 그대로 내장한 것입니다. 새 판을 받으려면 원본 저장소를 그 커밋으로 받아 같은 경로에 복사하고 plugin/NOTICE.md 에 적힌 한 줄 수정(트리거 문구)을 다시 적용한 뒤, `python3 -m py_compile plugin/scripts/*.py` 와 격리된 HOME 에서 `/korean-writing:humanize` 실행으로 확인하고 plugin/NOTICE.md 의 커밋을 올립니다. 스크립트는 `plugin/scripts/` 와 `plugin/skills/humanize-korean/references/` 의 상대 위치로 서로를 찾으므로 둘의 관계를 바꾸지 않습니다.
+윤문 파이프라인은 im-not-ai 의 런타임 부분집합을 그대로 내장한 것입니다. 새 판을 받으려면 원본 저장소를 그 커밋으로 받아 같은 경로에 복사하고 plugin/NOTICE.md 에 적힌 한 줄 수정(트리거 문구)을 다시 적용한 뒤, `python3 -m py_compile plugin/scripts/*.py` 와 격리된 HOME 에서 `/korean-kit:humanize` 실행으로 확인하고 plugin/NOTICE.md 의 커밋을 올립니다. 스크립트는 `plugin/scripts/` 와 `plugin/skills/humanize-korean/references/` 의 상대 위치로 서로를 찾으므로 둘의 관계를 바꾸지 않습니다.
 
 ## 버전
 

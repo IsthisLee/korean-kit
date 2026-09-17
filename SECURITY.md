@@ -22,7 +22,7 @@
 
 취약점을 공개 이슈로 올리지 말아 주세요. 다음 두 가지 중 하나를 씁니다.
 
-1. [Security → Report a vulnerability](https://github.com/IsthisLee/korean-writing/security/advisories/new) 로 비공개 신고
+1. [Security → Report a vulnerability](https://github.com/IsthisLee/korean-kit/security/advisories/new) 로 비공개 신고
 2. 메일 `rjsgmldnwn@gmail.com`
 
 받은 날부터 영업일 기준 5일 안에 접수 여부를 알려 드립니다. 수정이 필요하면 패치와 함께 권고문을 공개하고 신고자가 원하면 이름을 올립니다.
@@ -55,7 +55,7 @@ grep -nE 'subprocess|os\.system|popen|exec\b' plugin/scripts/*.py plugin/skills/
 | 범위        | 방법                                     |
 | ----------- | ---------------------------------------- |
 | 한 번만     | 스킬을 부르지 않으면 아무것도 돌지 않습니다 |
-| 완전히 제거 | `claude plugin uninstall korean-writing` |
+| 완전히 제거 | `claude plugin uninstall korean-kit` |
 
 ## 범위 밖
 
@@ -89,7 +89,7 @@ This table tracks the version in `plugin/.claude-plugin/plugin.json`. The `버�
 
 Please do not open a public issue. Use one of these instead:
 
-1. [Security → Report a vulnerability](https://github.com/IsthisLee/korean-writing/security/advisories/new) (private)
+1. [Security → Report a vulnerability](https://github.com/IsthisLee/korean-kit/security/advisories/new) (private)
 2. Email `rjsgmldnwn@gmail.com`
 
 You will get an acknowledgement within 5 business days. If a fix is needed, an advisory is published alongside the patch, and reporters are credited on request.
@@ -122,7 +122,7 @@ grep -nE 'subprocess|os\.system|popen|exec\b' plugin/scripts/*.py plugin/skills/
 | Scope       | How                                      |
 | ----------- | ---------------------------------------- |
 | Per use     | Do not invoke the skill; nothing runs     |
-| Remove it   | `claude plugin uninstall korean-writing` |
+| Remove it   | `claude plugin uninstall korean-kit` |
 
 ## Out of scope
 

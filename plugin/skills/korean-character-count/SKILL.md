@@ -59,4 +59,4 @@ bytes_neis                      NEIS 기준 바이트
 
 ## 이 스킬이 아닌 것
 
-문체 교정은 `korean-writing`, 이미 쓴 글 윤문은 `humanize-korean`이다. 이 스킬은 **세기만** 한다.
+이미 쓴 글 윤문은 `humanize-korean`이다. 이 스킬은 **세기만** 한다.

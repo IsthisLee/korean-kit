@@ -12,11 +12,12 @@
 
 ### 변경
 
+- **이름을 `korean-writing` 에서 `korean-kit` 으로 바꿨습니다.** 작성 스킬을 2026-09-15 에 뺀 뒤로 이 묶음은 글을 쓰지 않고 이미 쓴 글을 다듬거나 셉니다. `writing` 이 없는 기능을 약속하고 있었습니다. 저장소·마켓플레이스·플러그인·스킬 이름공간이 모두 바뀌어 설치는 `claude plugin marketplace add IsthisLee/korean-kit` 과 `claude plugin install korean-kit`, 윤문 호출은 `/korean-kit:humanize` 입니다. 이미 깔아 둔 기기는 다시 깔아야 합니다. 매니페스트 이름만 바꾸고 `claude plugin marketplace update` 를 돌려도 등록된 이름이 옛것으로 남는 것을 앞선 개명에서 확인했습니다. 옛 저장소 주소는 GitHub 이 새 주소로 넘겨줍니다
 - **분석 장비와 분석 문서를 별도 저장소로 옮겼습니다.** 사람 글과 Claude 글을 모으고 지표를 재는 스크립트, 분석 계획서, 비교 분석 안내, 파일럿 결과가 [korean-ai-signals](https://github.com/IsthisLee/korean-ai-signals) 로 갔습니다. 옮긴 뒤 계획서는 검증된 외부 지표만 쓰는 판으로 다시 썼고, 두 저장소의 커밋 이력은 이 정리를 마치며 각각 하나로 합쳤습니다. 분석기는 Kiwi·spaCy·SciPy 와 Common Crawl 접속이 필요해서, 네트워크를 쓰지 않고 의존성이 없는 이 플러그인과 한 저장소에 두기 어려웠습니다. 이 저장소에는 결과 요약과 링크만 남습니다
 - **README 를 분석 계획을 마친 상태 기준으로 다시 썼습니다.** 컨셉은 「내가 쓰려고 분석한 한국어 도구들. 원하는 것만 묶고 맘대로 커스텀한 Claude Code 플러그인」입니다. 묶은 기능과 따로 쓰는 것(권하는 output style, AI 신호 검사기)마다 어떻게 골랐는지, 묶으며 고친 것, 비교 순서와 도구 비교 기준, 검사기·output style·윤문 도구의 결과표를 담았습니다. 본 측정 전이라 결과 칸은 「측정 전」으로 두고 맨 위에 그 사실을 적었습니다. 표본을 학습에 쓰지 않고 검사 도구를 검증하는 데만 쓴다는 안내는 그대로 두었습니다. 파일 수정 연도로 사람 글을 추정한 오탐 수치와 기능만 견준 다른 도구 비교표는 뺐습니다
 - **소개 문구를 「내가 쓰려고 분석한 한국어 도구들. 원하는 것만 묶고 맘대로 커스텀한 Claude Code 플러그인」으로 바꿨습니다.** `plugin.json`·`marketplace.json` 의 설명, `tools/render-hero.py` 로 다시 그린 README 맨 위 그림, 소셜 카드 SVG·PNG 를 같이 바꿨습니다
 - **`docs/` 의 그림을 `docs/assets/` 로 모았습니다.** README 두 판의 그림 경로와 `tools/render-hero.py`·`render-hook-output.py`·`render-before-after.py` 의 출력 경로를 함께 고쳤고, 세 스크립트로 다시 그린 결과가 옮기기 전과 같은 파일인 것을 확인했습니다
-- **저장소와 마켓플레이스 이름에서 `claude-` 를 뗐습니다.** 저장소는 `IsthisLee/korean-writing`, 마켓플레이스는 `korean-writing` 입니다. 새로 까는 사람은 `claude plugin marketplace add IsthisLee/korean-writing` 과 `claude plugin install korean-writing@korean-writing` 을 씁니다. 이미 깐 사람은 할 일이 없습니다. 격리한 HOME 에서 옛 이름으로 깔아 둔 뒤 매니페스트의 이름만 바꾸고 `claude plugin marketplace update` 를 돌리니 등록 이름은 `claude-korean-writing` 그대로였고 플러그인도 `korean-writing@claude-korean-writing` 으로 켜져 있었습니다. 새 이름으로 깨끗한 HOME 에 깔아 훅 매니페스트까지 들어가는 것도 확인했습니다. 플러그인 이름과 스킬 이름, 설정 파일 `.korean-writing.json` 은 그대로입니다. 옛 저장소 주소는 GitHub 이 새 주소로 넘겨줍니다
+- **저장소와 마켓플레이스 이름에서 `claude-` 를 뗐습니다.** 저장소는 `IsthisLee/korean-kit`, 마켓플레이스는 `korean-kit` 입니다. 새로 까는 사람은 `claude plugin marketplace add IsthisLee/korean-kit` 과 `claude plugin install korean-kit@korean-kit` 을 씁니다. 이미 깐 사람은 할 일이 없습니다. 격리한 HOME 에서 옛 이름으로 깔아 둔 뒤 매니페스트의 이름만 바꾸고 `claude plugin marketplace update` 를 돌리니 등록 이름은 `claude-korean-kit` 그대로였고 플러그인도 `korean-kit@claude-korean-kit` 으로 켜져 있었습니다. 새 이름으로 깨끗한 HOME 에 깔아 훅 매니페스트까지 들어가는 것도 확인했습니다. 플러그인 이름과 스킬 이름, 설정 파일 `.korean-kit.json` 은 그대로입니다. 옛 저장소 주소는 GitHub 이 새 주소로 넘겨줍니다
 - **README 맨 위를 배너 대신 한 장짜리 그림으로 바꿨습니다.** Claude Code가 실제로 쓴 문장과 규칙대로 고친 문장을 규칙 코드와 함께 큰 글씨로 보여 주고 처음 작성할 때·저장할 때·수정할 때 세 시점을 아래에 둡니다. `tools/render-hero.py` 가 한국어·영어, 어두운 테마·밝은 테마 네 장을 그리고 왼쪽 문장이 정답 데이터에 없으면 멈춥니다. 옛 배너 넷은 지웠습니다
 - **「같은 요청, 두 결과」 그림을 공지에서 칼럼으로 바꾸고 판정자가 짚은 문장만 큰 글씨로 실었습니다.** 공지 예시는 스킬 쪽이 줄글이라 읽기 어렵고 글씨가 작았습니다. 릴리스 노트로도 붙여 봤지만 판정이 순서에 따라 갈려 쓰지 않았습니다(`EVALUATION.md` J)
 - **전후 비교 그림을 같은 자리끼리 짝지어 다시 그렸습니다.** 두 글에서 짚은 문장을 각각 따로 늘어놓으니 무엇과 무엇을 견주는지 보이지 않았습니다. 이제 여는 대목·같은 사실을 말하는 대목·제안하는 대목·마지막 문장을 줄마다 나란히 놓고 판정문에 그대로 나온 표현에만 「판정자가 짚은 곳」 을 답니다. 표시한 표현이 `judge.json` 에 없으면 그림을 그리다 멈춥니다. 한쪽에만 있던 「본문 뒤 안내」는 뺐습니다. 판정에 넣는 본문에서도 걷어내는 부분이라 그림에 실을 자리가 아닙니다
@@ -27,13 +28,13 @@
 
 ### 제거
 
-- **저장할 때 검사하던 훅과 그 규칙, 옛 측정 기록을 전부 뺐습니다.** `PostToolUse` 훅(`plugin/hooks/hooks.json`·`plugin/hooks-handlers/posttooluse.sh`), 판정 스크립트 `plugin/scripts/check.sh`, 슬래시 명령 `/korean-writing:check`, 회귀 테스트 `tests/`, 판정 기준과 측정 기록을 담은 `EVALUATION.md`, 측정 장비 `tools/measure.sh`·`tools/render-hook-output.py`, 훅을 재던 실험 `docs/experiments/`, 규칙 제보용 이슈 양식 둘이 없어졌습니다. K 규칙은 제 경험으로 정한 것이고 사람 글과 비교한 근거가 없었습니다. 검사 규칙은 [korean-ai-signals](https://github.com/IsthisLee/korean-ai-signals) 의 비교 분석에서 검증된 지표가 나오면 그때 새로 만듭니다. 설치해도 저절로 도는 프로그램은 이제 없고, 플러그인 설정 `edit_check`·`disabled_rules` 도 함께 없앴습니다. 커밋 직전 검사(`.githooks/pre-commit`)에는 개인 식별 정보 가드만 남았고, 그 문서 검사를 다른 저장소에 깔아 주던 `tools/install-git-hook.sh` 도 지웠습니다
+- **저장할 때 검사하던 훅과 그 규칙, 옛 측정 기록을 전부 뺐습니다.** `PostToolUse` 훅(`plugin/hooks/hooks.json`·`plugin/hooks-handlers/posttooluse.sh`), 판정 스크립트 `plugin/scripts/check.sh`, 슬래시 명령 `/korean-kit:check`, 회귀 테스트 `tests/`, 판정 기준과 측정 기록을 담은 `EVALUATION.md`, 측정 장비 `tools/measure.sh`·`tools/render-hook-output.py`, 훅을 재던 실험 `docs/experiments/`, 규칙 제보용 이슈 양식 둘이 없어졌습니다. K 규칙은 제 경험으로 정한 것이고 사람 글과 비교한 근거가 없었습니다. 검사 규칙은 [korean-ai-signals](https://github.com/IsthisLee/korean-ai-signals) 의 비교 분석에서 검증된 지표가 나오면 그때 새로 만듭니다. 설치해도 저절로 도는 프로그램은 이제 없고, 플러그인 설정 `edit_check`·`disabled_rules` 도 함께 없앴습니다. 커밋 직전 검사(`.githooks/pre-commit`)에는 개인 식별 정보 가드만 남았고, 그 문서 검사를 다른 저장소에 깔아 주던 `tools/install-git-hook.sh` 도 지웠습니다
 - **영어 README(`README.en.md`)를 뺐습니다.** README 는 한국어판 하나만 둡니다. 한국어 README 의 언어 전환 링크, `tools/release.sh` 와 CI 「버전 표기 일치」의 배지 검사 대상, PR 템플릿의 두 README 동시 수정 항목, SUPPORT.md·CONTRIBUTING.en.md 의 참조를 함께 고쳤습니다
 - **남은 영어 문서와 영어 그림을 뺐습니다.** `CONTRIBUTING.en.md`, `SUPPORT.md` 의 영어 절, 영어 README 만 쓰던 `docs/assets/hero.en.svg`·`hero-light.en.svg` 를 지웠습니다. `tools/render-hero.py` 는 한국어 그림 두 장만 그리고, 고친 스크립트가 그린 결과가 지금의 `hero.svg`·`hero-light.svg` 와 같은 것을 확인했습니다. `CONTRIBUTING.md`·`SUPPORT.md` 의 언어 전환 링크, `CONTRIBUTING.md` 의 README 두 판을 같이 고치라는 안내, PR 템플릿의 영어 기여 안내도 함께 지웠습니다. `SECURITY.md` 의 영어 절은 남겨 두었습니다
 - **뺀 기능을 재던 옛 실험과 문서를 지웠습니다.** 뺀 상시 주입·작성 스킬·저장소 output style 을 재던 `docs/experiments/always-on/`·`output-style/`·`skill-vs-imnotai/`·`writing-skill.md`, `detail-retention/` 의 `injection/`·`skill/`, 그런 문서를 가리키던 `docs/foundations.md`, `EVALUATION.md` 의 B·C·F·G·H·J·L·M·N 절과 그 측정 결과표를 지웠습니다. 남은 `EVALUATION.md` 는 검사 훅의 기준과 기록(A·D·E·I·K·O)입니다. 지우기 전 판은 커밋 `92b1e47` 에 있습니다
 - **지운 기능의 잔여물을 치웠습니다.** README 가 더는 쓰지 않는 칼럼 비교 그림과 그 재료·그림 스크립트(`docs/assets/before-after-column.svg`, `docs/samples/before-after/`, `tools/render-before-after.py`), 뺀 주입과 작성 스킬만 재던 `docs/experiments/task-performance/`, 지운 `sessionstart.sh` 를 실행하던 `docs/experiments/always-on/run.sh`·`settings-on.json` 을 지웠습니다. 지우기 전 판은 커밋 `b2e2089` 에 있습니다. README 두 판의 v2.1.0 안내문(뺀 스킬 적용 확인 기능 소개), 소셜 카드의 「쓸 때 · 작성 스킬」 칸, SECURITY.md 영어 절의 「셸 스크립트 둘」·「쉼표를 파일 전체로 셈」, 두 언어의 「스크립트는 408줄」(실제 379줄)도 고쳤습니다
-- **`korean-writing` 작성 스킬을 뺐습니다.** `/korean-writing` 으로 부르던 스킬이 없어졌습니다. 2026-09-14 부터 스스로 뜨지 않았고 평소 답변의 문체는 사용자가 고른 output style 이 맡고 있었습니다. 그 스킬에는 대명사와 주어를 빼라는 조항도 남아 있어 문장 성분을 살려 쓰라는 지침과 부딪혔습니다(`EVALUATION.md` O). 스킬 본문은 측정을 재현할 수 있도록 `docs/experiments/writing-skill.md` 로 옮겼고 스킬로 다시 잡히지 않게 이름을 바꿨습니다. 매니페스트의 스킬 목록과 설명, README 의 「처음 작성할 때」 시점과 「같은 요청, 두 결과」 예시, 맨 위 그림의 시점 칸을 함께 고쳤습니다. 다른 에이전트에 `npx skills` 로 넣던 `-s korean-writing` 도 없어졌습니다
-- **글 작성 요청에 스스로 뜨던 작성 스킬과 쓰기 전 확인 훅, output style 을 뺐습니다.** 평소 답변의 문체는 사용자가 고른 output style 이 맡습니다. 이 플러그인은 저장할 때의 검사와 윤문과 글자 수 세기를 맡습니다. `plugin/SKILL.md` 에 `disable-model-invocation: true` 를 걸어 `/korean-writing` 으로 직접 부를 때만 돕게 했습니다. 확인 훅(`pretooluse-skill.sh`)과 그 회귀 테스트를 지웠습니다. 검사 훅이 확인 창의 거절 답을 읽던 코드와 그 회귀 테스트 9건도 함께 지웠습니다. output style 파일은 M·N 절 측정을 재현할 수 있도록 `docs/experiments/output-style/` 로 옮겼습니다. 이번 판에 넣었던 「적용하고 설명은 넉넉히」 선택지와 추천 표시, 거절한 글의 검사 제외도 이 변경으로 사라졌습니다
+- **`korean-kit` 작성 스킬을 뺐습니다.** `/korean-kit` 으로 부르던 스킬이 없어졌습니다. 2026-09-14 부터 스스로 뜨지 않았고 평소 답변의 문체는 사용자가 고른 output style 이 맡고 있었습니다. 그 스킬에는 대명사와 주어를 빼라는 조항도 남아 있어 문장 성분을 살려 쓰라는 지침과 부딪혔습니다(`EVALUATION.md` O). 스킬 본문은 측정을 재현할 수 있도록 `docs/experiments/writing-skill.md` 로 옮겼고 스킬로 다시 잡히지 않게 이름을 바꿨습니다. 매니페스트의 스킬 목록과 설명, README 의 「처음 작성할 때」 시점과 「같은 요청, 두 결과」 예시, 맨 위 그림의 시점 칸을 함께 고쳤습니다. 다른 에이전트에 `npx skills` 로 넣던 `-s korean-kit` 도 없어졌습니다
+- **글 작성 요청에 스스로 뜨던 작성 스킬과 쓰기 전 확인 훅, output style 을 뺐습니다.** 평소 답변의 문체는 사용자가 고른 output style 이 맡습니다. 이 플러그인은 저장할 때의 검사와 윤문과 글자 수 세기를 맡습니다. `plugin/SKILL.md` 에 `disable-model-invocation: true` 를 걸어 `/korean-kit` 으로 직접 부를 때만 돕게 했습니다. 확인 훅(`pretooluse-skill.sh`)과 그 회귀 테스트를 지웠습니다. 검사 훅이 확인 창의 거절 답을 읽던 코드와 그 회귀 테스트 9건도 함께 지웠습니다. output style 파일은 M·N 절 측정을 재현할 수 있도록 `docs/experiments/output-style/` 로 옮겼습니다. 이번 판에 넣었던 「적용하고 설명은 넉넉히」 선택지와 추천 표시, 거절한 글의 검사 제외도 이 변경으로 사라졌습니다
 
 ### 수정
 
@@ -64,19 +65,19 @@
 
 ### 추가
 
-- **검사 결과에 걸린 자리를 붙입니다.** 규칙마다 셋까지 파일의 줄 번호와 짧은 발췌를 알림에 붙이고 넘치면 「외 N곳」으로 줄입니다. Claude 가 그 자리만 고치고 걸리지 않은 문장은 건드리지 않게 하려는 것입니다. 판정(코드와 횟수)은 예전 경로로 계산하고 위치는 따로 찾습니다. 이 기계의 한글 `.md` 304개를 옛 훅과 새 훅에 같은 입력으로 넣어 판정이 달라진 파일이 0개인 것을 확인했습니다(`EVALUATION.md` K). 알림대로 고친 글의 정보 보존도 같은 조건의 옛 훅과 차이가 없었습니다(I1 재측정, 정보가 사라진 표본 옛 훅 12건 중 0건, 새 훅 17건 중 1건, Fisher 단측 p=0.586). `plugin/scripts/check.sh` 와 `/korean-writing:check` 도 같은 위치를 냅니다
-- **규칙을 골라 끌 수 있습니다.** 파일 머리 10줄 안의 `<!-- korean-writing: disable K1 K9 -->`, 저장소에 커밋하는 `.korean-writing.json`(`disable` 규칙 목록과 `ignore` 경로 패턴), 환경변수 `KOREAN_WRITING_DISABLE_RULES`, 플러그인 설정 `disabled_rules` 넷입니다. 설정 파일은 편집한 파일에서 위로 올라가며 찾고 `.git` 이 있는 폴더에서 멈춥니다. 읽지 못한 설정은 무시하고 검사한 뒤 그 사실을 알립니다. 끄는 방법은 훅의 알림에 적지 않았습니다. 알림에 있으면 Claude 가 표현을 고치는 대신 규칙을 끌 수 있어서입니다. 회귀 테스트 24건을 더해 검사 훅 테스트가 86건이 됐습니다
-- **Claude Code 밖에서도 작성 규칙을 쓸 수 있습니다.** `npx skills add IsthisLee/claude-korean-writing -s korean-writing -s korean-character-count -g` 로 Codex·Cursor 같은 다른 에이전트에 깔립니다. 격리한 HOME 에서 설치와 글자 수 스크립트 실행까지 확인했고 각 에이전트 안의 동작은 확인하지 못했습니다. 훅과 윤문은 Claude Code 에서만 돕니다
+- **검사 결과에 걸린 자리를 붙입니다.** 규칙마다 셋까지 파일의 줄 번호와 짧은 발췌를 알림에 붙이고 넘치면 「외 N곳」으로 줄입니다. Claude 가 그 자리만 고치고 걸리지 않은 문장은 건드리지 않게 하려는 것입니다. 판정(코드와 횟수)은 예전 경로로 계산하고 위치는 따로 찾습니다. 이 기계의 한글 `.md` 304개를 옛 훅과 새 훅에 같은 입력으로 넣어 판정이 달라진 파일이 0개인 것을 확인했습니다(`EVALUATION.md` K). 알림대로 고친 글의 정보 보존도 같은 조건의 옛 훅과 차이가 없었습니다(I1 재측정, 정보가 사라진 표본 옛 훅 12건 중 0건, 새 훅 17건 중 1건, Fisher 단측 p=0.586). `plugin/scripts/check.sh` 와 `/korean-kit:check` 도 같은 위치를 냅니다
+- **규칙을 골라 끌 수 있습니다.** 파일 머리 10줄 안의 `<!-- korean-kit: disable K1 K9 -->`, 저장소에 커밋하는 `.korean-kit.json`(`disable` 규칙 목록과 `ignore` 경로 패턴), 환경변수 `KOREAN_WRITING_DISABLE_RULES`, 플러그인 설정 `disabled_rules` 넷입니다. 설정 파일은 편집한 파일에서 위로 올라가며 찾고 `.git` 이 있는 폴더에서 멈춥니다. 읽지 못한 설정은 무시하고 검사한 뒤 그 사실을 알립니다. 끄는 방법은 훅의 알림에 적지 않았습니다. 알림에 있으면 Claude 가 표현을 고치는 대신 규칙을 끌 수 있어서입니다. 회귀 테스트 24건을 더해 검사 훅 테스트가 86건이 됐습니다
+- **Claude Code 밖에서도 작성 규칙을 쓸 수 있습니다.** `npx skills add IsthisLee/claude-korean-kit -s korean-kit -s korean-character-count -g` 로 Codex·Cursor 같은 다른 에이전트에 깔립니다. 격리한 HOME 에서 설치와 글자 수 스크립트 실행까지 확인했고 각 에이전트 안의 동작은 확인하지 못했습니다. 훅과 윤문은 Claude Code 에서만 돕니다
 - **작성 스킬이 쓰는 사람의 문체를 따릅니다.** 사용자가 자기 글을 표본으로 주면 종결어미·문장 길이·낱말·문장 부호를 표본에 맞추고 이 규칙보다 표본을 먼저 둡니다. 이미 있는 문서를 고칠 때는 그 문서의 격식을 그대로 둡니다. [humanizer](https://github.com/blader/humanizer) 의 Voice 절과 im-not-ai 규칙집의 register 보존을 따랐습니다. 표본이 없는 과제로 다시 잰 J3 에서 세부 보존은 앞 판과 같았습니다. 고친 블라인드 판정 스크립트로 im-not-ai 윤문본과 기본 네 쌍을 붙여 3승 1패였고 진 쌍은 `~할 수 있다` 가 되풀이된 짧은 공지였습니다(`EVALUATION.md` J)
 - `tools/render-hook-output.py` 가 README 의 훅 출력 그림을 다시 그립니다. 정답 데이터 문장으로 문서를 만들어 실제 훅에 넣고 그 출력을 그대로 옮깁니다. 손으로 그렸던 그림을 누구나 재현할 수 있게 됐습니다
 
 ### 변경
 
-- SECURITY.md 의 「읽는 것」에 `.korean-writing.json` 을 더했습니다. 검사 훅의 import 에 표준 라이브러리 `fnmatch` 가 늘었습니다
+- SECURITY.md 의 「읽는 것」에 `.korean-kit.json` 을 더했습니다. 검사 훅의 import 에 표준 라이브러리 `fnmatch` 가 늘었습니다
 
 ### 제거
 
-- **`crafting-effective-readmes` 스킬을 뺐습니다.** 한국어 산문과 관계없는 README 구조 스킬이었고 설명이 영어라 영어 README 요청에도 떴습니다. 지난 측정값으로 상시 컨텍스트의 스킬 설명 몫 약 70 토큰이 빠집니다. 이 스킬을 쓰던 사람은 원본 [agent-skills](https://github.com/joshuadavidthomas/agent-skills) 에서 받을 수 있습니다. README 를 쓰는 요청의 문장은 계속 `korean-writing` 스킬이 맡습니다
+- **`crafting-effective-readmes` 스킬을 뺐습니다.** 한국어 산문과 관계없는 README 구조 스킬이었고 설명이 영어라 영어 README 요청에도 떴습니다. 지난 측정값으로 상시 컨텍스트의 스킬 설명 몫 약 70 토큰이 빠집니다. 이 스킬을 쓰던 사람은 원본 [agent-skills](https://github.com/joshuadavidthomas/agent-skills) 에서 받을 수 있습니다. README 를 쓰는 요청의 문장은 계속 `korean-kit` 스킬이 맡습니다
 
 ### 수정
 
@@ -86,7 +87,7 @@
 
 ### 추가
 
-- **모델이 `korean-writing` 스킬을 스스로 부르기 전에 적용할지 묻습니다.** 새 PreToolUse 훅 `pretooluse-skill.sh` 가 이 스킬의 `Skill` 호출에 `permissionDecision: "ask"` 를 돌려줍니다. 문체 규칙을 답변에 주입했을 때 세부가 빠진 것(`EVALUATION.md` H13)과 같은 규칙집을 쓰므로 세부를 잃으면 안 되는 문서라면 쓰기 전에 거절할 수 있게 했습니다. 거절하면 규칙 없이 씁니다. 헤드리스 실측에서 평범한 글 요청에 모델이 스스로 이 스킬을 부를 때 훅이 걸렸고 기본 모드와 bypass 모드 모두 확인 없이는 스킬이 돌지 않았습니다. 사용자가 `/korean-writing` 을 직접 친 실행은 훅에 걸리지 않았습니다. 대화형 세션의 확인 창은 공식 문서의 설명이고 직접 보지는 못했습니다. 다른 스킬과 도구는 그대로 지나가고 `KOREAN_WRITING_HOOK_DISABLED=1` 이면 묻지 않습니다. 묻는 문장은 한국어이고 모델이 넘긴 요청 요약을 60자까지 「」 안에 보여 줍니다. 예: 「운영팀에 보낼 슬랙 공지를 3줄로 작성…」 작성에 korean-writing 문체 규칙을 적용할까요? 요청에 적은 내용은 그대로 담지만 Claude 가 덧붙이는 설명은 짧아질 수 있습니다. 이 주의 문구는 스킬로 직접 잰 결과만큼만 말합니다(`EVALUATION.md` J3). 요청에 적어 준 사실 27항목은 스킬을 켜도 모두 담겼고, 사실을 주지 않은 설명 문서는 한글 661자에서 450자로 짧아지며 곁가지 설명 하나가 8/8 에서 3/8 로 줄었습니다. 같은 글자 수의 무관한 문서를 붙인 대조군에서는 그런 차이가 없었습니다. 확인 창에 이 사유가 보이는지 공식 문서에 적혀 있지 않아 같은 문장을 `systemMessage` 로도 냅니다. 회귀 테스트 22건을 `tests/test_pretooluse.py` 로 넣었습니다
+- **모델이 `korean-kit` 스킬을 스스로 부르기 전에 적용할지 묻습니다.** 새 PreToolUse 훅 `pretooluse-skill.sh` 가 이 스킬의 `Skill` 호출에 `permissionDecision: "ask"` 를 돌려줍니다. 문체 규칙을 답변에 주입했을 때 세부가 빠진 것(`EVALUATION.md` H13)과 같은 규칙집을 쓰므로 세부를 잃으면 안 되는 문서라면 쓰기 전에 거절할 수 있게 했습니다. 거절하면 규칙 없이 씁니다. 헤드리스 실측에서 평범한 글 요청에 모델이 스스로 이 스킬을 부를 때 훅이 걸렸고 기본 모드와 bypass 모드 모두 확인 없이는 스킬이 돌지 않았습니다. 사용자가 `/korean-kit` 을 직접 친 실행은 훅에 걸리지 않았습니다. 대화형 세션의 확인 창은 공식 문서의 설명이고 직접 보지는 못했습니다. 다른 스킬과 도구는 그대로 지나가고 `KOREAN_WRITING_HOOK_DISABLED=1` 이면 묻지 않습니다. 묻는 문장은 한국어이고 모델이 넘긴 요청 요약을 60자까지 「」 안에 보여 줍니다. 예: 「운영팀에 보낼 슬랙 공지를 3줄로 작성…」 작성에 korean-kit 문체 규칙을 적용할까요? 요청에 적은 내용은 그대로 담지만 Claude 가 덧붙이는 설명은 짧아질 수 있습니다. 이 주의 문구는 스킬로 직접 잰 결과만큼만 말합니다(`EVALUATION.md` J3). 요청에 적어 준 사실 27항목은 스킬을 켜도 모두 담겼고, 사실을 주지 않은 설명 문서는 한글 661자에서 450자로 짧아지며 곁가지 설명 하나가 8/8 에서 3/8 로 줄었습니다. 같은 글자 수의 무관한 문서를 붙인 대조군에서는 그런 차이가 없었습니다. 확인 창에 이 사유가 보이는지 공식 문서에 적혀 있지 않아 같은 문장을 `systemMessage` 로도 냅니다. 회귀 테스트 22건을 `tests/test_pretooluse.py` 로 넣었습니다
 
 ### 변경
 
@@ -111,7 +112,7 @@
 - **네트워크를 쓰지 않는다는 약속을 CI 가 지킵니다.** README 와 SECURITY.md 가 전부터 이것을 약속했는데 지키는 것은 사람의 주의뿐이었습니다. 설치본인 `plugin/` 아래 실행 파일 16개에서 `urllib`·`socket`·`fetch(`·`curl`·`wget` 같은 표지를 찾고 하나라도 있으면 막습니다. 훅에 `curl` 한 줄, 내장 스크립트에 `import urllib.request` 한 줄을 심어 둘 다 파일과 줄 번호까지 잡는 것을 확인했고 같은 단어를 주석에만 넣었을 때는 걸리지 않았습니다. `plugin/` 에서 실행 파일을 하나도 찾지 못하면 경로가 바뀐 것으로 보고 그것부터 알립니다
 - **OpenSSF Scorecard 를 매주 돌립니다.** 브랜치 보호, 리뷰 여부, 액션 고정, 위험한 워크플로 패턴, 토큰 권한을 점수로 냅니다. 결과는 Security 탭에 올라갑니다. 아직 한 번도 돌지 않아 점수를 적지 못합니다
 
-- **`/korean-writing:check` 를 넣었습니다.** 써 둔 문서를 편집 훅과 같은 기준으로 검사하고 걸린 자리를 짚은 뒤 고칠지 묻습니다. 전에는 `scripts/check.sh` 가 저장소 안에만 있어 플러그인을 설치한 사람은 이미 저장한 문서를 검사할 방법이 없었습니다
+- **`/korean-kit:check` 를 넣었습니다.** 써 둔 문서를 편집 훅과 같은 기준으로 검사하고 걸린 자리를 짚은 뒤 고칠지 묻습니다. 전에는 `scripts/check.sh` 가 저장소 안에만 있어 플러그인을 설치한 사람은 이미 저장한 문서를 검사할 방법이 없었습니다
 - **플러그인 설정으로 검사 훅을 끕니다.** `plugin.json` 에 `userConfig` 를 넣어 `edit_check` 를 `/plugin` 에서 켜고 끕니다. 환경변수도 그대로 듣습니다. 매니페스트에 `license` 와 `homepage` 도 넣었습니다
 - **주입이 일을 방해하지 않는지 재는 실험을 넣었습니다.** 이 저장소의 측정은 전부 글이 좋아졌는가만 봤고 규칙을 넣어서 모델이 일을 덜 잘하게 되는지는 잰 적이 없었습니다. `docs/experiments/task-performance/` 가 넷을 봅니다. 기술 문제 정답률(Haiku 40/40 대 39/40, Opus 30/30 대 29/30), 규칙과 반대되는 것을 사용자가 명시로 요청했을 때의 준수(주입 있음 25/25, 주입 없음 23/25), 코드 품질(모델이 쓴 함수를 실제로 돌려 숨은 테스트에 넣습니다. 양쪽 만점이라 이 과제로는 못 가립니다), 설계 능력(빠지면 설계가 틀리는 개념이 나왔는지 셉니다. 여기서 저하가 나왔습니다), 서브에이전트 조사 정확도와 답변 언어(양쪽 6/6, 한글 누출 2% 이하), 코드 작업에서의 스킬 오발동(양쪽 0건, 양성 대조 1건)입니다. 정답률은 두 조건이 거의 만점이라 10%p 를 넘는 저하만 배제됩니다. 그 한계를 EVALUATION.md 의 H 절에 적었습니다
 - **재는 영역을 넷 더 넓혔습니다.** 코드 리뷰(심어 둔 결함 다섯을 몇 개 찾는가), 정보 보존(요약이 원문의 사실 열둘을 얼마나 지키는가), 과잉 단정(정보가 없을 때 없다고 말하는가), 디버깅(원인이 되는 줄을 짚는가)입니다. 넷 다 차이 구간이 0 을 품습니다. 주입을 받은 쪽이 대체로 짧은데(리뷰 1,172자 대 928자, 요약 1,320자 대 1,030자) 결함 검출과 사실 보존은 갈리지 않았습니다. 설계와 다른 점은 열거할 항목이 정해져 있느냐입니다. 판정 기준은 `EVALUATION.md` 의 H7~H10 입니다
@@ -121,7 +122,7 @@
 - **`scripts/install-git-hook.sh`.** 커밋 직전에 스테이지된 `.md` 를 검사하는 git 훅을 깝니다. README 가 전부터 pre-commit 을 약속하고 있었는데 깔 방법이 없었습니다. 이미 다른 `pre-commit` 이 있으면 덮어쓰지 않고 넣을 두 줄만 알려 줍니다
 - **`scripts/check.sh --all`.** `git ls-files` 로 저장소가 쓴 `.md` 를 열거해 검사합니다. 가져온 파일만 뺍니다
 
-- **`korean-writing` 스킬을 im-not-ai 규칙집 수준으로 올렸습니다.** 그 규칙집의 `quick: true` 항목 61개 가운데 처방을 가진 것이 21개였는데 60개가 됐습니다(남은 하나 G-3 은 규칙집이 실증 부족으로 보류한 항목입니다). 빠져 있던 것 중 둘이 그 규칙집의 실측 최강 신호입니다. `A가 아니라 B다` 부정 대구(사람 대비 밀도 9.2배)와 `~하고,` 처럼 연결어미 뒤에 찍는 쉼표(KatFish 측정에서 사람 4.1% 대 AI 19.8%)입니다. 대명사·이중 조사·좌향 수식·만능 동사·사전 은유·결말 공식·명사화 누적 등도 새로 넣고 「글을 끝낼 때」 절을 신설했습니다
+- **`korean-kit` 스킬을 im-not-ai 규칙집 수준으로 올렸습니다.** 그 규칙집의 `quick: true` 항목 61개 가운데 처방을 가진 것이 21개였는데 60개가 됐습니다(남은 하나 G-3 은 규칙집이 실증 부족으로 보류한 항목입니다). 빠져 있던 것 중 둘이 그 규칙집의 실측 최강 신호입니다. `A가 아니라 B다` 부정 대구(사람 대비 밀도 9.2배)와 `~하고,` 처럼 연결어미 뒤에 찍는 쉼표(KatFish 측정에서 사람 4.1% 대 AI 19.8%)입니다. 대명사·이중 조사·좌향 수식·만능 동사·사전 은유·결말 공식·명사화 누적 등도 새로 넣고 「글을 끝낼 때」 절을 신설했습니다
 - **검사 훅에 `K9` 부정 대구와 `K10` 연결어미 뒤 쉼표를 넣었습니다.** 임계는 이 머신의 한국어 `.md` 205개로 정했습니다. 대구 3회 이상, 쉼표는 6회 이상이면서 연결어미의 30% 이상일 때 알립니다. 2023년 이전에 쓰인 문서 32개에서 오탐은 0건입니다. 쉼표는 줄표와 같은 이유로 파일 전체를 셉니다
 - **`docs/experiments/skill-vs-imnotai/` 를 상설 게이트로 넣었습니다.** 스킬로 처음부터 쓴 글과 규칙 없이 쓴 뒤 im-not-ai 로 윤문한 글을 블라인드로 붙입니다. 단문은 Fast Path 한 콜, 장문은 정밀 3콜(진단·윤문·마무리)로 윤문하고 결합 입력은 저장소의 `scripts/prepare_monolith_input.py` 가 만듭니다. 스킬이 진 쌍이 더 많으면 종료 코드 1입니다. `SKILL.md` 를 고쳤으면 릴리스 전에 돌립니다
 - **스킬에 「리듬」 절을 넣었습니다.** 규칙을 늘린 초판은 표지를 크게 줄이고도 블라인드 쌍대 판정에서 옛 스킬을 이기지 못했습니다(5승 6패). 판정자가 되풀이해 지적한 것은 문장 길이가 고르게 짧다는 것이었고, 재 보니 표준편차가 16.28에서 12.93으로 떨어져 있었습니다. 규칙을 지키려다 문장을 자른 것이고 길이 균일성은 규칙집의 E-1 항목입니다. 문단마다 100자 안팎의 긴 문장을 하나 두라는 규칙을 넣으니 표준편차가 18.97로 올라 네 조건 중 가장 높아졌고 판정도 뒤집혔습니다
@@ -148,13 +149,13 @@
 
 - **설명 문서를 실제 구현과 전수 대조했습니다.** README 한국어판·영어판, `SECURITY.md`, `EVALUATION.md` 에서 틀린 값 스물여섯 곳을 고쳤습니다. 실측 문서 수(143→205), 회귀 건수(63→79), 상시 규칙 항목 수(아홉→열), 훅 스크립트 줄 수(173→234), CI 검사 문서 수(12→14), 파일 크기 표, 서브에이전트용 규칙 스니펫입니다. 저장소 구성 트리에 `docs/samples/` 와 `docs/experiments/` 둘이 빠져 있어 넣었습니다
 - **`EVALUATION.md` 의 「측정 중 고친 것」 절이 편집 중에 통째로 사라져 있었습니다.** 열여섯 건이 지워졌고 헤딩 둘이 중복돼 있었습니다. README 전수 대조 중에 「그렇게 바꾼 열세 건」 이라는 문장의 근거를 세다가 발견했습니다. git 에서 되살리고 이번에 고친 여섯 건을 17~22번으로 더했습니다
-- **제외 표시가 문서 일곱 종의 자기 검사를 꺼 놓고 있었습니다.** 훅이 `korean-writing: ignore` 라는 문자열이 어디에 있든 검사를 건너뛰어서, 이 기능을 설명하는 README·CLAUDE.md·CHANGELOG 등이 자기 검사를 통째로 넘겼습니다. 이제 파일 앞 열 줄에 줄 하나로 선 `<!-- korean-writing: ignore -->` 만 지시로 봅니다. 실제로 끄려고 붙인 표시 여섯 개는 전부 1행에 있어 그대로 동작합니다
+- **제외 표시가 문서 일곱 종의 자기 검사를 꺼 놓고 있었습니다.** 훅이 `korean-kit: ignore` 라는 문자열이 어디에 있든 검사를 건너뛰어서, 이 기능을 설명하는 README·CLAUDE.md·CHANGELOG 등이 자기 검사를 통째로 넘겼습니다. 이제 파일 앞 열 줄에 줄 하나로 선 `<!-- korean-kit: ignore -->` 만 지시로 봅니다. 실제로 끄려고 붙인 표시 여섯 개는 전부 1행에 있어 그대로 동작합니다
 - `scripts/measure.sh` 가 두 자리 코드를 세지 못했습니다. 집계 정규식이 `K\d` 라 `K10` 줄이 코드별 표에서 빠졌습니다
 - 저장소의 산문 문서를 새 판정에 맞춰 고쳤습니다. 연결어미 뒤 쉼표 86개를 지우고 부정 대구를 문서마다 둘 이하로 줄였습니다
 - CI 의 자기 검사 대상에 `README.en.md` 를 넣었습니다
 
-- **im-not-ai 의 윤문 파이프라인을 내장했습니다.** 커밋 `9747f036cdc2`(2026-09-06)의 런타임 부분집합을 그대로 넣었습니다. 스킬 셋(`humanize-korean`·`humanize`·`humanize-redo`), 에이전트 셋(진단·윤문·마무리 검토), 파이썬 스크립트 아홉, 규칙집과 참조 문서입니다. `/korean-writing:humanize` 와 `/korean-writing:humanize-redo` 로 부르고 "AI 티 없애줘" 같은 요청에는 `humanize-korean` 스킬이 뜹니다. 가져온 파일에서 고친 것은 스킬 설명의 트리거 문구 하나뿐입니다(NOTICE.md). 개발용 에이전트 여섯은 싣지 않았습니다
-- 격리된 HOME 에서 확인했습니다. 설치 뒤 `/humanize` 자동완성에 `/korean-writing:` 셋만 뜨고 `/korean-writing:humanize` 에 AI 티를 몰아넣은 200자 문단을 넣으니 세 콜이 끝까지 돌아 변경률 39%, 등급 A-, 자체검증 6/6 으로 끝났습니다(451초, 1.64달러). 기록은 `docs/samples/humanize-run.md` 에 있습니다
+- **im-not-ai 의 윤문 파이프라인을 내장했습니다.** 커밋 `9747f036cdc2`(2026-09-06)의 런타임 부분집합을 그대로 넣었습니다. 스킬 셋(`humanize-korean`·`humanize`·`humanize-redo`), 에이전트 셋(진단·윤문·마무리 검토), 파이썬 스크립트 아홉, 규칙집과 참조 문서입니다. `/korean-kit:humanize` 와 `/korean-kit:humanize-redo` 로 부르고 "AI 티 없애줘" 같은 요청에는 `humanize-korean` 스킬이 뜹니다. 가져온 파일에서 고친 것은 스킬 설명의 트리거 문구 하나뿐입니다(NOTICE.md). 개발용 에이전트 여섯은 싣지 않았습니다
+- 격리된 HOME 에서 확인했습니다. 설치 뒤 `/humanize` 자동완성에 `/korean-kit:` 셋만 뜨고 `/korean-kit:humanize` 에 AI 티를 몰아넣은 200자 문단을 넣으니 세 콜이 끝까지 돌아 변경률 39%, 등급 A-, 자체검증 6/6 으로 끝났습니다(451초, 1.64달러). 기록은 `docs/samples/humanize-run.md` 에 있습니다
 - CI 에 내장 스크립트의 `py_compile` 과 `--help` 실행 확인 단계
 - README 머리에 정답 문장 넷을 전후 표로 보였습니다
 
@@ -209,7 +210,7 @@
 - **상시 규칙을 넣으며 남겼던 세 가지를 전부 쟀습니다.** 서브에이전트에는 훅도 스킬도 전달되지 않아 플러그인 범위 밖으로 두고 쓰는 쪽 `CLAUDE.md` 에 넣도록 안내합니다. 긴 대화에서는 30턴을 쌓은 뒤에도 주입 조건이 네 쌍 모두 이깁니다. 규칙을 고쳤을 때의 회귀는 `docs/experiments/always-on/regress.sh` 로 봅니다. 근거는 EVALUATION.md 의 「상시 규칙을 넣으며 남겼던 것」에 있습니다
 - 실험 장비를 `docs/experiments/always-on/` 에 보존했습니다. 스크립트, 프롬프트 12개, 주입문 초안, 판정 기준과 결과 보고입니다. README 에 `--strict-mcp-config` 와 `--setting-sources ""` 를 빠뜨렸을 때 무슨 일이 생기는지 먼저 적었습니다
 
-- `korean-writing` 스킬이 맡는 범위를 "밖으로 나갈 글" 에서 "글 작성 요청" 으로 넓혔습니다. 슬랙·메일·보고서처럼 남에게 보내는 글만이 아니라 회의록·작업 메모처럼 안에서 보는 글도, 써 달라는 요청이면 스킬이 로드됩니다. 코드만 쓰는 작업은 그대로 대상이 아닙니다. 스킬 설명과 README 두 판, CLAUDE.md, EVALUATION.md 의 표현을 맞췄습니다. 설명이 길어져 `/context` 기준 약 50토큰에서 70토큰이 됐습니다
+- `korean-kit` 스킬이 맡는 범위를 "밖으로 나갈 글" 에서 "글 작성 요청" 으로 넓혔습니다. 슬랙·메일·보고서처럼 남에게 보내는 글만이 아니라 회의록·작업 메모처럼 안에서 보는 글도, 써 달라는 요청이면 스킬이 로드됩니다. 코드만 쓰는 작업은 그대로 대상이 아닙니다. 스킬 설명과 README 두 판, CLAUDE.md, EVALUATION.md 의 표현을 맞췄습니다. 설명이 길어져 `/context` 기준 약 50토큰에서 70토큰이 됐습니다
 - **목적을 "Claude Code 가 쓰는 모든 한국어" 로 넓혔습니다.** 이전에는 글 작성 요청과 `.md` 편집만 맡아서 가장 양이 많은 평소 답변이 비어 있었습니다. README 에 어느 자리를 맡고 어느 자리를 안 맡는지 적은 표를 넣었습니다
 - EVALUATION.md 의 D2 예산을 상시 500 토큰에서 1,000 토큰으로 올렸습니다. 상시 규칙 662 토큰이 들어가면서 합계가 약 950 이 됩니다. 시험한 규칙을 그대로 넣고 예산을 다시 잡았습니다
 - CI 를 macOS 와 Linux 양쪽에서 돌립니다. 훅은 bash 와 python3 만 쓰므로 platform 배지를 `macOS | Linux` 로 고쳤습니다
@@ -226,12 +227,12 @@
 
 ### 추가
 
-- `korean-writing` 스킬: 밖으로 나갈 글을 처음 쓸 때 번역투·AI 관용구를 피하는 원칙과 교정 예시
+- `korean-kit` 스킬: 밖으로 나갈 글을 처음 쓸 때 번역투·AI 관용구를 피하는 원칙과 교정 예시
 - `humanize-korean` 스킬: 이미 쓴 글을 사실 불변으로 다듬는 윤문 (claude-forge에서 이식)
 - `korean-character-count` 스킬: grapheme 기준 글자 수 (k-skill에서 이식)
 - `crafting-effective-readmes` 스킬: README의 절 구성을 프로젝트 유형(오픈소스·개인·사내·설정)에 맞춰 잡습니다 (agent-toolkit에서 이식)
 - PostToolUse 훅: `.md` 편집 시 이번에 쓴 부분만 AI 티 패턴 K1~K8로 검사합니다. 편집을 되돌리지 않고 알리기만 합니다. 코드블록·인라인 코드·URL·표 행은 검사하지 않고 편집분의 한글 비중이 30% 미만이면 한글 비중 30% 이상인 줄만 모아 다시 봅니다. 줄표는 이번 편집에 하나라도 있으면 파일 전체 개수로 판정합니다(문단씩 고치며 쌓이는 것). `~~~` 코드블록과 HTML 주석도 검사에서 뺍니다. K7 은 "죽다" 를 잡지 않고 K8 은 `~에 대해`·`~를 통해` 횟수를 세지 않습니다(실제 문서 143개 실측)
-- 훅 끄기 수단 두 가지. 파일 머리의 `<!-- korean-writing: ignore -->` 표시(그 파일만), 환경변수 `KOREAN_WRITING_HOOK_DISABLED=1`(세션 전체). python3 가 없으면 검사 없이 통과합니다
+- 훅 끄기 수단 두 가지. 파일 머리의 `<!-- korean-kit: ignore -->` 표시(그 파일만), 환경변수 `KOREAN_WRITING_HOOK_DISABLED=1`(세션 전체). python3 가 없으면 검사 없이 통과합니다
 - `scripts/check.sh`: 이미 써 둔 문서를 통째로 훅과 같은 기준으로 검사합니다. 걸리면 종료 코드 1이라 CI·pre-commit 에 그대로 씁니다
 - `scripts/release.sh`: 버전·CHANGELOG·README 배지·커밋·태그를 한 번에. 버전의 정본은 `plugin.json` 한 곳입니다
 - 검증 기준(`EVALUATION.md`): 실제 실패 문장 10건과 정상 문장 5건으로 만든 훅 정확도 기준, 스킬 트리거 기준, 사용하는 사람의 기준. 회귀 테스트 43건
@@ -239,10 +240,10 @@
 - README 한국어판·영어판, 훅 출력 데모 이미지(`docs/hook-output.svg`)
 - 제3자 고지(`NOTICE.md`): im-not-ai·claude-forge·k-skill·agent-toolkit 의 원 저작권 표시
 
-[Unreleased]: https://github.com/IsthisLee/korean-writing/compare/v2.1.0...HEAD
-[2.1.0]: https://github.com/IsthisLee/korean-writing/compare/v2.0.0...v2.1.0
-[2.0.0]: https://github.com/IsthisLee/korean-writing/compare/v1.3.0...v2.0.0
-[1.3.0]: https://github.com/IsthisLee/korean-writing/compare/v1.2.0...v1.3.0
-[1.2.0]: https://github.com/IsthisLee/korean-writing/compare/v1.1.0...v1.2.0
-[1.1.0]: https://github.com/IsthisLee/korean-writing/compare/v1.0.0...v1.1.0
-[1.0.0]: https://github.com/IsthisLee/korean-writing/releases/tag/v1.0.0
+[Unreleased]: https://github.com/IsthisLee/korean-kit/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/IsthisLee/korean-kit/compare/v2.0.0...v2.1.0
+[2.0.0]: https://github.com/IsthisLee/korean-kit/compare/v1.3.0...v2.0.0
+[1.3.0]: https://github.com/IsthisLee/korean-kit/compare/v1.2.0...v1.3.0
+[1.2.0]: https://github.com/IsthisLee/korean-kit/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/IsthisLee/korean-kit/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/IsthisLee/korean-kit/releases/tag/v1.0.0

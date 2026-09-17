@@ -58,7 +58,7 @@ def render(theme):
     c = THEME[theme]
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
          f'<rect width="{W}" height="{H}" rx="16" fill="{c["bg"]}"/>',
-         t(M, 112, "korean-writing", 56, c["text"], 700, MONO),
+         t(M, 112, "korean-kit", 56, c["text"], 700, MONO),
          t(W - M, 84, TEXT["tag1"], 20, c["dim"], 400, anchor="end"),
          t(W - M, 116, TEXT["tag2"], 24, c["text"], 700, anchor="end"),
          f'<line x1="{M}" y1="148" x2="{W - M}" y2="148" stroke="{c["rule"]}" stroke-width="2"/>',
@@ -78,7 +78,7 @@ def render(theme):
         o.append(f'<rect x="{x:.0f}" y="{y}" width="{sw:.0f}" height="72" rx="12" fill="{c["stage"]}"/>')
         o.append(t(x + 20, y + 30, head, 15, c["chipt"], 700))
         o.append(t(x + 20, y + 54, body, 17, c["text"]))
-    o.append(t(M, H - 36, "claude plugin install korean-writing", 18, c["dim"], 400, MONO))
+    o.append(t(M, H - 36, "claude plugin install korean-kit", 18, c["dim"], 400, MONO))
     o.append(t(W - M, H - 36, TEXT["foot"], 16, c["dim"], 400, anchor="end"))
     o.append("</svg>")
     return "\n".join(o) + "\n"

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
-  "name": "korean-writing",
+  "name": "korean-kit",
   "version": "2.1.0",
   "description": "내가 쓰려고 분석한 한국어 도구들. 원하는 것만 묶고 맘대로 커스텀한 Claude Code 플러그인",
   "owner": {
@@ -10,7 +10,7 @@
   },
   "plugins": [
     {
-      "name": "korean-writing",
+      "name": "korean-kit",
       "version": "2.1.0",
       "description": "내가 쓰려고 분석한 한국어 도구들. 원하는 것만 묶고 맘대로 커스텀한 Claude Code 플러그인. 이미 쓴 글은 내장한 im-not-ai 로 다듬고, 한국어 글자 수는 스크립트로 셉니다. 네트워크를 쓰지 않습니다.",
       "author": {
@@ -18,8 +18,8 @@
         "email": "rjsgmldnwn@gmail.com",
         "url": "https://github.com/IsthisLee"
       },
-      "homepage": "https://github.com/IsthisLee/korean-writing#readme",
-      "repository": "https://github.com/IsthisLee/korean-writing",
+      "homepage": "https://github.com/IsthisLee/korean-kit#readme",
+      "repository": "https://github.com/IsthisLee/korean-kit",
       "license": "MIT",
       "category": "productivity",
       "keywords": [
