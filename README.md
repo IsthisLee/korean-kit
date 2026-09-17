@@ -6,6 +6,7 @@
 <img alt="Claude Code Plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-8A2BE2">
 <img alt="version" src="https://img.shields.io/badge/version-2.1.0-lightgrey">
 <img alt="network" src="https://img.shields.io/badge/network-none-success">
+<a href="https://github.com/IsthisLee/korean-ai-signals"><img alt="analysis" src="https://img.shields.io/badge/analysis-korean--ai--signals-informational"></a>
 
 </p>
 
@@ -31,6 +32,7 @@
 <a href="#묶은-것">묶은 것</a> ·
 <a href="#어떻게-골랐나">고른 기준</a> ·
 <a href="#분석-결과">분석 결과</a> ·
+<a href="#분석-도구">분석 도구</a> ·
 <a href="#설치">설치</a> ·
 <a href="#사용법">사용법</a> ·
 <a href="#원칙">원칙</a> ·
@@ -49,7 +51,7 @@
 
 Claude Code로 한국어 문서를 쓰면서 번역투와 AI 티를 줄여 준다는 도구를 여럿 써 봤습니다. 써 보니 두 가지가 걸렸습니다. 도구마다 AI 티라고 부르는 목록의 근거가 약했고, 도구가 알려 준 대로 고치다가 원래 있던 내용이 사라진 적도 있었습니다.
 
-그래서 도구를 고르기 전에 사람이 쓴 글과 Claude가 쓴 글을 직접 비교했습니다. 두 글을 실제로 가르는 신호로 검사기를 만들고, 그 검사기로 문체 도구와 윤문 도구를 같은 조건에서 견줬습니다. 비교로 고를 수 있는 도구는 기준을 통과한 것만 묶었고, 묶은 도구도 제 작업 방식에 맞게 고쳤습니다. 모두에게 맞추려는 범용 도구가 아니라 제가 쓰려고 만든 묶음입니다.
+그래서 도구를 고르기 전에 사람이 쓴 글과 Claude가 쓴 글을 직접 비교했습니다. 두 글을 실제로 가르는 신호로 검사기를 만들고, 그 검사기로 문체 도구와 윤문 도구를 같은 조건에서 견줬습니다. 비교로 고를 수 있는 도구는 기준을 통과한 것만 묶었고, 묶은 도구도 제 작업 방식에 맞게 고쳤습니다. 모두에게 맞추려는 범용 도구가 아니라 제가 쓰려고 만든 묶음입니다. 비교에 쓴 장비와 계획, 결과는 별도 저장소 [korean-ai-signals](https://github.com/IsthisLee/korean-ai-signals) 에 모두 공개돼 있습니다.
 
 도구를 고르는 기준은 두 가지이고, 첫째가 둘째보다 앞섭니다.
 
@@ -198,9 +200,9 @@ CI가 macOS와 Linux에서 같은 검사를 돌립니다. Windows는 Git Bash나
 | 2차 윤문 | 저절로 돌지 않습니다                             | `/korean-kit:humanize-redo [지시]`         |
 | 글자 수  | "500자 이내로", "글자 수 세줘" 같은 요청         | `/korean-kit:korean-character-count`       |
 
-## 분석 다시 돌리기
+## 분석 도구
 
-검사기와 분석에 쓴 스크립트는 별도 저장소 [korean-ai-signals](https://github.com/IsthisLee/korean-ai-signals) 에 있습니다. 형태소 분석기 Kiwi와 SciPy가 필요해서 이 플러그인과 따로 두었습니다. 준비 명령과 돌리는 순서는 그 저장소의 README에 있습니다. Claude 글을 새로 만들려면 로그인한 `claude` 명령이 필요하고 호출마다 비용이 듭니다. 모은 사람 글 본문과 Claude 글은 커밋하지 않고, 출처 주소와 게시일을 적은 목록만 커밋합니다.
+무엇을 묶을지 정하는 데 쓴 분석 도구는 별도 저장소 [korean-ai-signals](https://github.com/IsthisLee/korean-ai-signals) 에 있습니다. 사람 글과 Claude 글을 모으는 수집기, 지표를 재는 측정기, 결과보다 먼저 적은 [분석 계획](https://github.com/IsthisLee/korean-ai-signals/blob/main/docs/plan.md), 측정 결과가 모두 거기 있습니다. 형태소 분석기 Kiwi와 SciPy가 필요해서 이 플러그인과 따로 두었습니다. 준비 명령과 돌리는 순서는 그 저장소의 README에 있습니다. Claude 글을 새로 만들려면 로그인한 `claude` 명령이 필요하고 호출마다 비용이 듭니다. 모은 사람 글 본문과 Claude 글은 커밋하지 않고, 출처 주소와 게시일을 적은 목록만 커밋합니다.
 
 ## 원칙
 
