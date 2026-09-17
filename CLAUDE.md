@@ -15,11 +15,14 @@
 `plugin/` 만 설치한 사람의 기계로 갑니다. 나머지는 여기 남습니다.
 
 ```
-plugin/     설치본. 매니페스트·스킬·에이전트·런타임 스크립트·LICENSE·NOTICE
-tools/      관리자 스크립트(release·guard·그림 그리기)
-docs/assets 그림
-.github/    CI·이슈 양식·CI 전용 npm 도구
-루트 문서    README·CHANGELOG·CONTRIBUTING·SECURITY·SUPPORT·CODE_OF_CONDUCT
+plugin/          설치본. 매니페스트·스킬·에이전트·런타임 스크립트·LICENSE·NOTICE
+.claude-plugin/  마켓플레이스 매니페스트
+tools/           관리자 스크립트(release·guard·그림 그리기)
+docs/assets/     README 와 소셜 카드 그림
+docs/samples/    실제 실행 기록 예시
+.github/         CI·이슈 양식·CI 전용 npm 도구
+.githooks/       커밋 직전 가드
+루트 문서         README·CHANGELOG·CONTRIBUTING·SECURITY·SUPPORT·CODE_OF_CONDUCT·CLAUDE
 ```
 
 **플러그인 설치는 `source` 가 가리키는 폴더를 통째로 복사하고 무엇을 빼는 수단이 없습니다.**
