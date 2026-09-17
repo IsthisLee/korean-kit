@@ -17,6 +17,7 @@ ROWS = [
     ("윤문", "이미 쓴 글을 사실과 숫자는 두고 문체만 다듬는다", "im-not-ai"),
     ("글자 수", "한국어 글자 수를 어림하지 않고 스크립트로 센다", "k-skill"),
     ("검사 규칙", "사람 글과 Claude 글을 비교해 근거가 생기면 넣는다", "분석 중"),
+    ("output style", "평소 답변과 처음 쓰는 글의 문체를 정한다", "분석 중"),
 ]
 TEXT = {
     "tag1": "원하는 것만 묶고 맘대로 커스텀한 Claude Code 플러그인",
@@ -63,14 +64,14 @@ def render(theme):
          t(W - M, 116, TEXT["tag2"], 24, c["text"], 700, anchor="end"),
          f'<line x1="{M}" y1="148" x2="{W - M}" y2="148" stroke="{c["rule"]}" stroke-width="2"/>',
          t(M, 186, TEXT["cap"], 14, c["dim"], 700)]
-    y = 240
+    y = 232
     for name, desc, src in ROWS:
         o.append(f'<rect x="{M}" y="{y - 24}" width="{X_NAME - M - 20}" height="34" rx="17" fill="{c["chip"]}"/>')
         o.append(t(M + 16, y, name, 16, c["chipt"], 700))
         o.append(t(X_DESC, y, desc, 20, c["text"]))
         o.append(t(X_FROM, y, src, 15, c["dim"], 400, anchor="end"))
-        y += 62
-    y += 16
+        y += 56
+    y += 20
     n = len(TEXT["criteria"])
     sw = (W - 2 * M - (n - 1) * 16) / n
     for i, (head, body) in enumerate(TEXT["criteria"]):

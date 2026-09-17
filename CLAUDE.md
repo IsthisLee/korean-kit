@@ -15,7 +15,7 @@
 `plugin/` 만 설치한 사람의 기계로 갑니다. 나머지는 여기 남습니다.
 
 ```
-plugin/          설치본. 매니페스트·스킬·에이전트·런타임 스크립트·LICENSE·NOTICE
+plugin/          설치본. 매니페스트·스킬·에이전트·런타임 스크립트·output style·LICENSE·NOTICE
 .claude-plugin/  마켓플레이스 매니페스트
 tools/           관리자 스크립트(release·guard·그림 그리기)
 docs/assets/     README 와 소셜 카드 그림
@@ -56,6 +56,13 @@ node plugin/skills/korean-character-count/scripts/korean_character_count.js --te
 **네트워크를 쓰지 않습니다.** 스킬도 스크립트도 원문을 에이전트 외부로 보내지 않습니다. README 가 이것을 약속하고 있으므로, 네트워크 호출을 넣는 변경은 그 약속을 깨뜨립니다. 필요하다고 판단되면 코드를 넣기 전에 이슈로 먼저 논의합니다.
 
 **규칙을 되살릴 때는 근거를 먼저 만듭니다.** 경험으로 정한 규칙을 다시 넣지 않습니다. 사람이 쓴 글과 Claude 가 쓴 글을 비교해 그 표현이 실제로 두 글을 가르는지 보이고, 사람 글을 잡지 않는다는 것을 표본으로 확인한 뒤에 넣습니다. 방법은 [korean-ai-signals 의 계획서](https://github.com/IsthisLee/korean-ai-signals/blob/main/docs/plan.md) 에 있습니다.
+
+**output style 은 저절로 켜지지 않게 합니다.** 플러그인은 `plugin/output-styles/` 디렉터리로 스타일을 실을 수 있습니다. 실을 때 지킬 것이 둘입니다.
+
+- **`force-for-plugin: true` 를 쓰지 않습니다.** 그 값을 켜면 설치만으로 사용자의 `outputStyle` 설정을 덮어쓰고 강제로 적용됩니다. 「설치해도 저절로 도는 것이 없다」는 약속을 깨뜨립니다.
+- **`keep-coding-instructions: true` 를 적습니다.** 없으면 Claude Code 의 코딩 지침이 통째로 빠집니다. 문체만 바꾸려다 코드 작업 방식까지 바꾸게 됩니다.
+
+출처: [Output styles](https://code.claude.com/docs/en/output-styles) (2026-09-18 확인). 무엇을 실을지는 korean-ai-signals 의 도구 비교 결과로 정합니다.
 
 **한국어 글은 켜 둔 output style 을 따릅니다.** 커밋 메시지, README, 이슈 답변, 작업 메모가 모두 해당합니다.
 

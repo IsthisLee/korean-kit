@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### 변경
+
+- **output style 을 따로 깔라고 안내하던 것을 플러그인이 직접 싣는 쪽으로 바꿨습니다.** 플러그인은 `output-styles/` 디렉터리로 스타일을 실을 수 있습니다([Output styles](https://code.claude.com/docs/en/output-styles), 2026-09-18 확인). 무엇을 실을지는 korean-ai-signals 의 도구 비교 결과로 정합니다. README 에 켜고 끄는 법(`/config` → Output style, 또는 `outputStyle` 설정)과 주의사항 셋을 적었습니다. 지침이 매 요청에 함께 가는 것, 출력이 길어지는 것, `keep-coding-instructions` 가 없으면 코딩 지침이 빠지는 것입니다. 설치만으로 강제 적용하는 `force-for-plugin` 은 쓰지 않기로 CLAUDE.md 에 못 박았습니다
+
 ## [0.1.0] - 2026-09-18
 
 첫 공개입니다.
