@@ -147,28 +147,30 @@ AUROC는 사람 글과 Claude 글을 한 편씩 짝지었을 때 Claude 글의 �
 
 ### output style
 
-| output style                                             | 뜻 손실 | 자연스러움 | AI 신호 밀도(1,000자당) | 명확성  | 판정      |
-| -------------------------------------------------------- | ------- | ---------- | ----------------------- | ------- | --------- |
-| 기준선(아무것도 켜지 않음)                               | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 비교 기준 |
-| [fluent-korean](https://github.com/snflkd/fluent-korean) | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전   |
+| output style                                             | 라이선스 | 뜻 손실 | 자연스러움 | AI 신호 밀도(1,000자당) | 명확성  | 판정      |
+| -------------------------------------------------------- | -------- | ------- | ---------- | ----------------------- | ------- | --------- |
+| 기준선(아무것도 켜지 않음)                               | —        | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 비교 기준 |
+| [fluent-korean](https://github.com/snflkd/fluent-korean) | MIT      | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전   |
 
 output style 로 배포되는 한국어 플러그인은 2026-09-15 까지 이것 하나를 찾았습니다. 찾은 방법은 [분석 계획](https://github.com/IsthisLee/korean-ai-signals/blob/main/docs/plan.md)에 있습니다.
 
 ### 윤문 도구
 
-| 도구                                                                                  | 뜻 손실 | 자연스러움 | AI 신호 밀도(1,000자당) | 명확성  | 변경률  | 판정    |
-| ------------------------------------------------------------------------------------- | ------- | ---------- | ----------------------- | ------- | ------- | ------- |
-| [k-skill](https://github.com/NomaDamas/k-skill) `korean-humanizer`                    | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [im-not-ai](https://github.com/epoko77-ai/im-not-ai) `humanize-korean` (지금 묶은 것) | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [claude-forge](https://github.com/sangrokjung/claude-forge) `humanize-korean`         | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [patina](https://github.com/devswha/patina)                                           | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [DaleSeo/korean-skills](https://github.com/DaleSeo/korean-skills) `humanizer`         | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [korean-report-skills](https://github.com/JangHyun-bin/korean-report-skills)          | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [korean-prose-skill](https://github.com/JellyBrick/korean-prose-skill)                | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [yoonmoon](https://github.com/amondnet/yoonmoon)                                      | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
-| [stop-slop-ko](https://github.com/limleesol/stop-slop-ko)                             | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| 도구                                                                                  | 라이선스   | 뜻 손실 | 자연스러움 | AI 신호 밀도(1,000자당) | 명확성  | 변경률  | 판정    |
+| ------------------------------------------------------------------------------------- | ---------- | ------- | ---------- | ----------------------- | ------- | ------- | ------- |
+| [k-skill](https://github.com/NomaDamas/k-skill) `korean-humanizer`                    | MIT        | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [im-not-ai](https://github.com/epoko77-ai/im-not-ai) `humanize-korean` (지금 묶은 것) | MIT        | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [claude-forge](https://github.com/sangrokjung/claude-forge) `humanize-korean`         | MIT        | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [patina](https://github.com/devswha/patina)                                           | MIT        | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [DaleSeo/korean-skills](https://github.com/DaleSeo/korean-skills) `humanizer`         | MIT        | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [korean-report-skills](https://github.com/JangHyun-bin/korean-report-skills)          | Apache-2.0 | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [korean-prose-skill](https://github.com/JellyBrick/korean-prose-skill)                | **없음**   | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [yoonmoon](https://github.com/amondnet/yoonmoon)                                      | MIT        | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
+| [stop-slop-ko](https://github.com/limleesol/stop-slop-ko)                             | MIT        | 측정 전 | 측정 전    | 측정 전                 | 측정 전 | 측정 전 | 측정 전 |
 
 k-skill 의 맞춤법 검사기는 외부 서비스의 이용 조건 때문에 대량 측정에서 뺍니다.
+
+라이선스는 2026-09-18 에 GitHub API 로 확인했습니다. `korean-prose-skill` 은 LICENSE 파일도 README 의 언급도 없어 기본값인 「모든 권리 유보」입니다. 재배포가 막히므로 측정 결과와 무관하게 묶을 수 없고, 비교 대상으로만 둡니다. `korean-report-skills` 는 Apache-2.0 이라 묶게 되면 NOTICE 고지 조건이 더 붙습니다.
 
 ## 설치
 
