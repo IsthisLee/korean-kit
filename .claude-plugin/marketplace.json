@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "korean-kit",
-  "version": "2.1.0",
+  "version": "0.1.0",
   "description": "내가 쓰려고 분석한 한국어 도구들. 원하는 것만 묶고 맘대로 커스텀한 Claude Code 플러그인",
   "owner": {
     "name": "Isthis",
@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "korean-kit",
-      "version": "2.1.0",
+      "version": "0.1.0",
       "description": "내가 쓰려고 분석한 한국어 도구들. 원하는 것만 묶고 맘대로 커스텀한 Claude Code 플러그인. 이미 쓴 글은 내장한 im-not-ai 로 다듬고, 한국어 글자 수는 스크립트로 셉니다. 네트워크를 쓰지 않습니다.",
       "author": {
         "name": "Isthis",
