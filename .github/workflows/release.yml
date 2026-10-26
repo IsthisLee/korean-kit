@@ -103,7 +103,7 @@ jobs:
           .github/tools/node_modules/.bin/claude plugin validate "/tmp/stage/$NAME" --strict
 
       - name: 검증을 마친 것만 다음 작업으로 넘긴다
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: release-${{ steps.meta.outputs.tag }}
           path: dist/
@@ -121,7 +121,7 @@ jobs:
     steps:
       # 저장소를 받지 않는다. 이 작업이 만지는 것은 build 가 넘긴 파일뿐이다.
       - name: 검증을 마친 산출물을 받는다
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: release-${{ needs.build.outputs.tag }}
           path: dist
